@@ -25,6 +25,22 @@ After building, the compiled JavaScript files will be in the `dist` folder.
 
 - Contains utility functions that can be used in multiple places.
 
+## Importing files with alias
+
+Project is configured to use absolute imports with the `@` alias pointing to the `src` folder.
+
+Insead of writing:
+
+```typescript
+import { User } from "../../entities/user";
+```
+
+You can write:
+
+```typescript
+import { User } from "@/entities/user";
+```
+
 ## NPM Functions
 
 `npm run dev` - start development server with nodemon
