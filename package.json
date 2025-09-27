@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/index.js",
-    "dev": "nodemon --require tsconfig-paths/register --exec ts-node src/index.ts",
+    "dev": "ts-node-dev --respawn --transpile-only --watch src --require tsconfig-paths/register --project ./tsconfig.json src/index.ts",
     "build": "tsc && tsc-alias"
   },
   "keywords": [],
@@ -15,13 +15,13 @@
   "dependencies": {
     "express": "^5.1.0",
     "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.9.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
     "@types/node": "^24.3.1",
-    "nodemon": "^3.1.10",
     "tsc-alias": "^1.8.16"
   }
 }
